@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // Numbers
 let x = 10.5;
 // let y = 123n;

@@ -30,3 +30,5 @@ anyValue = [];
 // Unknow
 let unkn: unknown = 1;
 if (typeof unkn === 'string') unkn.toUpperCase();
+
+export {};
