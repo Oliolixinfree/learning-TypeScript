@@ -17,3 +17,5 @@ const car: Car = {
 };
 
 car['go'] = true;
+
+export {};
