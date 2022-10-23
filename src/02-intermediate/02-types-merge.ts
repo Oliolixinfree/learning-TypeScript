@@ -32,3 +32,5 @@ type Developer = {
   say(): void;
   code?: (arg: string) => void;
 } & Emploee;
+
+export {};
