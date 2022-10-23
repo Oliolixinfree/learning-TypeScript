@@ -1,10 +1,10 @@
-interface User {
+export interface User {
   readonly email: string;
   readonly login: string;
   password: string;
 }
 
-interface User {
+export interface User {
   isOnline?: boolean;
 }
 
@@ -13,18 +13,18 @@ interface User {
 // }
 // window.isAuth;
 
-interface Person {
+export interface Person {
   readonly firstName: string;
   lastName: string;
   pthone?: string;
   yearOfBirth: number;
 }
 
-interface Emploee extends User, Person {
+export interface Emploee extends User, Person {
   contractStart: Date;
 }
 
-interface Developer extends Emploee {
+export interface Developer extends Emploee {
   skills: string[];
   phone: string;
   level?: 'junior' | 'middle' | 'senior';
