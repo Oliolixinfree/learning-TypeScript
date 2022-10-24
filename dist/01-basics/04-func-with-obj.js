@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function printPoint(point) {
     console.log(`Coordinate of the point is x:${point.x} and y:${point.y}`);
 }

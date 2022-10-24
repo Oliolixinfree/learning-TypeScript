@@ -45,3 +45,5 @@ const people: Person[] = [
 
 // const malePeople = people.find((person) => person.sex === 'male'); // const malePeople: Person | undefined
 const malePeople = people.find((person) => person.sex === 'male')!; // const malePeople: Person
+
+export {};
