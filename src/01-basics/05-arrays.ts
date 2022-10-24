@@ -18,3 +18,5 @@ function printArr(arr: unknown[]): void {
     console.log(el, index);
   });
 }
+
+export {};
