@@ -26,3 +26,5 @@ const obj2: ModelData<Array<number>> = {
   title: 'asda',
   value: [123, 111],
 };
+
+export {};
