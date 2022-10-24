@@ -1,5 +1,6 @@
 "use strict";
 // Оператор !
+Object.defineProperty(exports, "__esModule", { value: true });
 let word = null;
 const num = 10;
 if (num > 5) {

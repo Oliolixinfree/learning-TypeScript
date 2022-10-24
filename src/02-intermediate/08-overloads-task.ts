@@ -11,3 +11,5 @@ function head(value: any): any {
 
 const result = head('strs');
 const result2 = head([1, 2, 4]);
+
+export {};

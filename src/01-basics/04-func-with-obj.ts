@@ -23,3 +23,5 @@ function printName(user: { firstName: string; lastName?: string }): void {
 
 printName({ firstName: 'Sergay' });
 printName({ firstName: 'Sergay', lastName: 'Borovskiy' });
+
+export {};

@@ -1,6 +1,7 @@
 "use strict";
 // Дана функция head, которая возвращает либо первый символ переданной строки,
 // либо первый элемент переданного массива.
+Object.defineProperty(exports, "__esModule", { value: true });
 function head(value) {
     return value[0];
 }
