@@ -1,40 +1,29 @@
 "use strict";
-// Нюансы конструктора
+// Добавьте типы для классов. Используйте короткую запись для конструктора
+// и сделайте метод log недоступным для инстансов обоих классов.
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Car = void 0;
-class Vehicle {
-    // private createdAt: Date;
-    constructor(createdAt) {
-        this.createdAt = createdAt;
+exports.Rectangle = void 0;
+class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+        this.log();
     }
-    drive(speed) {
-        console.log(' Let us go with speed', speed.toFixed());
-        this.log(speed);
+    area() {
+        return this.height * this.width;
     }
-    stop() {
-        console.log('Stopped');
-    }
-    log(speed) {
-        console.log('Vehicle has changed speed to', speed, this.createdAt);
-    }
-    alternativeLog(text) {
-        console.log(text.toUpperCase);
+    log() {
+        console.log(`new Rectangle was create at ${new Date()}`);
     }
 }
-class Car extends Vehicle {
-    // public color: string;
-    // public maxSpeed: number;
-    constructor(color, maxSpeed) {
-        super(new Date());
+exports.Rectangle = Rectangle;
+class Square extends Rectangle {
+    constructor(width, color) {
+        super(width, width);
+        this.width = width;
         this.color = color;
-        this.maxSpeed = maxSpeed;
-        // this.color = color;
-        // this.maxSpeed = maxSpeed;
     }
-    getInfo() {
-        console.log(this.color, this.maxSpeed, this.createdAt);
+    paint(newColor) {
+        this.color = newColor;
     }
 }
-exports.Car = Car;
-const car1 = new Car('red', 200);
-// car1.color = 'blue'
