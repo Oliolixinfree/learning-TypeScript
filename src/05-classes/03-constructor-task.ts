@@ -1,39 +1,26 @@
-// Нюансы конструктора
+// Добавьте типы для классов. Используйте короткую запись для конструктора
+// и сделайте метод log недоступным для инстансов обоих классов.
 
-class Vehicle {
-  // private createdAt: Date;
+export class Rectangle {
+  constructor(public width: number, public height: number) {
+    this.log();
+  }
 
-  constructor(protected createdAt: Date) {}
+  area(): number {
+    return this.height * this.width;
+  }
 
-  public drive(speed: number): void {
-    console.log(' Let us go with speed', speed.toFixed());
-    this.log(speed);
-  }
-  public stop() {
-    console.log('Stopped');
-  }
-  private log(speed: number) {
-    console.log('Vehicle has changed speed to', speed, this.createdAt);
-  }
-  protected alternativeLog(text: string) {
-    console.log(text.toUpperCase);
+  private log(): void {
+    console.log(`new Rectangle was create at ${new Date()}`);
   }
 }
 
-export class Car extends Vehicle {
-  // public color: string;
-  // public maxSpeed: number;
-
-  constructor(public readonly color: string, public maxSpeed: number) {
-    super(new Date());
-    // this.color = color;
-    // this.maxSpeed = maxSpeed;
+class Square extends Rectangle {
+  constructor(public width: number, public color: string) {
+    super(width, width);
   }
 
-  getInfo() {
-    console.log(this.color, this.maxSpeed, this.createdAt);
+  paint(newColor: string): void {
+    this.color = newColor;
   }
 }
-
-const car1 = new Car('red', 200);
-// car1.color = 'blue'
